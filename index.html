@@ -1,239 +1,229 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AHMED SALAMA BADR - Portfolio</title>
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
-    body { direction: rtl; background: #f5f7fa; color: #333; }
-
-    /* Navbar */
-    nav {
-      background: #0d1b2a;
-      color: #fff;
-      padding: 15px 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-      position: sticky;
-      top: 0;
-      z-index: 999;
-    }
-    nav .container { width: 90%; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
-    nav h1 { font-size: 22px; font-weight: bold; color: #ffd700; }
-    nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
-    nav ul li a { color: #fff; text-decoration: none; font-weight: 600; transition: 0.3s; padding:5px 10px; border-radius:5px; }
-    nav ul li a:hover { background: #ffd700; color: #0d1b2a; }
-
-    /* Hero */
-    .hero {
-      background: linear-gradient(135deg, #1f4068, #2980b9);
-      color: #fff;
-      text-align: center;
-      padding: 90px 20px 70px 20px;
-    }
-    .profile-img {
-      width: 180px; height: 180px; border-radius: 50%; border: 4px solid #ffd700; object-fit: cover;
-      margin-bottom: 20px; transition: transform 0.3s;
-    }
-    .profile-img:hover { transform: scale(1.08); }
-    .hero h2 { font-size: 32px; margin: 15px 0; font-weight: 700; }
-    .hero p { font-size: 18px; margin-bottom: 25px; line-height: 1.6; }
-    .btn { display: inline-block; padding: 16px 32px; background: #ffd700; color: #0d1b2a; text-decoration: none; border-radius: 12px; font-weight: bold; transition: 0.3s; box-shadow: 0 6px 12px rgba(0,0,0,0.15);}
-    .btn:hover { background: #ffc107; box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
-
-    /* Section titles */
-    .section { padding: 70px 0; }
-    .container { width: 90%; margin: auto; }
-    h2.section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0d1b2a; position: relative; font-weight: 700; }
-    h2.section-title::after { content: ''; width: 80px; height: 5px; background: #ffd700; display: block; margin: 15px auto 0; border-radius: 3px; }
-
-    /* About */
-    .about p { max-width: 850px; margin: auto; font-size: 18px; line-height: 1.8; text-align: center; }
-
-    /* Projects */
-    .projects .project-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
-    .project-card {
-      background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.4s, box-shadow 0.4s;
-    }
-    .project-card:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.2); }
-    .project-card img { width: 100%; height: 180px; object-fit: cover; }
-    .project-card h3 { padding: 15px; font-size: 20px; color: #0d1b2a; }
-    .project-card p { padding: 0 15px 20px 15px; font-size: 16px; color: #555; }
-
-    /* Contact & Buttons */
-    .contact-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-    .call-btn, .whatsapp-btn, .instagram-btn { padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; color: #fff; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
-    .call-btn { background: #007bff; }
-    .call-btn:hover { background: #0056b3; }
-    .whatsapp-btn { background: #25d366; }
-    .whatsapp-btn:hover { background: #1ebe57; }
-    .instagram-btn { background: #C13584; }
-    .instagram-btn:hover { background: #a0266f; }
-
-    /* Service & Payment */
-    #service select, #payment input { padding:12px; margin:12px 0; width:100%; border-radius:8px; border:1px solid #ccc; font-size:16px; }
-    #service a, #payment a { display:inline-block; margin-top:12px; }
-
-    footer { text-align: center; padding: 25px 0; background: #0d1b2a; color: #fff; font-weight: 600; }
-    @media (max-width: 768px){
-      .hero h2 { font-size: 28px; } 
-      .hero p { font-size: 16px; }
-      nav h1 { font-size: 20px; }
-      nav ul li a { font-size: 14px; padding:4px 8px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AHMED SALAMA BADR - Portfolio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI', Tahoma, sans-serif;}
+body{direction:rtl;background:#f5f7fa;color:#333;}
+nav{background:#0d1b2a;color:#fff;padding:15px 0;position:sticky;top:0;z-index:999;}
+nav .container{width:90%;margin:auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;}
+nav h1{font-size:22px;font-weight:bold;color:#ffd700;}
+nav ul{list-style:none;display:flex;gap:20px;flex-wrap:wrap;}
+nav ul li a{color:#fff;text-decoration:none;font-weight:600;padding:5px 10px;border-radius:5px;transition:0.3s;}
+nav ul li a:hover{background:#ffd700;color:#0d1b2a;}
+.hero{background:linear-gradient(135deg,#1f4068,#2980b9);color:#fff;text-align:center;padding:90px 20px 70px 20px;}
+.profile-img{width:180px;height:180px;border-radius:50%;border:4px solid #ffd700;object-fit:cover;margin-bottom:20px;transition: transform 0.3s;}
+.profile-img:hover{transform: scale(1.08);}
+.hero h2{font-size:32px;margin:15px 0;font-weight:700;}
+.hero p{font-size:18px;margin-bottom:25px;line-height:1.6;}
+.btn{display:inline-block;padding:16px 32px;background:#ffd700;color:#0d1b2a;text-decoration:none;border-radius:12px;font-weight:bold;transition:0.3s;box-shadow:0 6px 12px rgba(0,0,0,0.15);}
+.btn:hover{background:#ffc107;box-shadow:0 8px 18px rgba(0,0,0,0.25);}
+.section{padding:70px 0;}
+.container{width:90%;margin:auto;}
+h2.section-title{text-align:center;font-size:36px;margin-bottom:50px;color:#0d1b2a;font-weight:700;position:relative;}
+h2.section-title::after{content: '';width:80px;height:5px;background:#ffd700;display:block;margin:15px auto 0;border-radius:3px;}
+.about p{max-width:850px;margin:auto;font-size:18px;line-height:1.8;text-align:center;}
+.projects .project-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;}
+.project-card{background:#fff;border-radius:15px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,0.1);transition:transform 0.4s,box-shadow 0.4s;}
+.project-card:hover{transform:translateY(-8px);box-shadow:0 12px 28px rgba(0,0,0,0.2);}
+.project-card img{width:100%;height:180px;object-fit:cover;}
+.project-card h3{padding:15px;font-size:20px;color:#0d1b2a;}
+.project-card p{padding:0 15px 20px 15px;font-size:16px;color:#555;}
+.contact-buttons{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:30px;}
+.call-btn,.whatsapp-btn,.instagram-btn{padding:16px 30px;border-radius:12px;text-decoration:none;font-weight:bold;color:#fff;transition:0.3s;box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+.call-btn{background:#007bff;} .call-btn:hover{background:#0056b3;}
+.whatsapp-btn{background:#25d366;} .whatsapp-btn:hover{background:#1ebe57;}
+.instagram-btn{background:#C13584;} .instagram-btn:hover{background:#a0266f;}
+#service select,#payment input,#rating input,#languageSelect{padding:12px;margin:12px 0;width:100%;border-radius:8px;border:1px solid #ccc;font-size:16px;}
+#service a,#payment a,#rating button{display:inline-block;margin-top:12px;}
+#reviews{max-width:600px;margin:20px auto;}
+.review{background:#fff;padding:15px;margin-bottom:10px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+footer{text-align:center;padding:25px 0;background:#0d1b2a;color:#fff;font-weight:600;}
+/* Sidebar Settings */
+#settingsSidebar{position:fixed;top:0;right:-400px;width:350px;height:100%;background:#fff;box-shadow:-4px 0 20px rgba(0,0,0,0.3);transition:0.4s;padding:30px;z-index:9999;overflow-y:auto;}
+#settingsSidebar button{margin-bottom:20px;padding:8px 12px;background:#0d1b2a;color:#fff;border:none;border-radius:6px;cursor:pointer;}
+@media(max-width:768px){.hero h2{font-size:28px;}.hero p{font-size:16px;} nav h1{font-size:20px;} nav ul li a{font-size:14px;padding:4px 8px;} #settingsSidebar{width:280px;}}
+</style>
 </head>
-
 <body>
-
-  <!-- Navbar -->
   <nav>
-    <div class="container">
-      <h1>AHMED SALAMA BADR</h1>
-      <ul>
-        <li><a href="#about">نبذة</a></li>
-        <li><a href="#projects">مشاريعي</a></li>
-        <li><a href="#service">احجز خدمتك</a></li>
-        <li><a href="#payment">الدفع</a></li>
-        <li><a href="#contact">تواصل</a></li>
-      </ul>
-    </div>
-  </nav>
+<div class="container">
+<h1 data-ar="AHMED SALAMA BADR" data-en="AHMED SALAMA BADR">AHMED SALAMA BADR</h1>
+<ul>
+<li><a href="#about" data-ar="نبذة" data-en="About">نبذة</a></li>
+<li><a href="#projects" data-ar="مشاريعي" data-en="Projects">مشاريعي</a></li>
+<li><a href="#service" data-ar="احجز خدمتك" data-en="Book Service">احجز خدمتك</a></li>
+<li><a href="#payment" data-ar="الدفع" data-en="Payment">الدفع</a></li>
+<li><a href="#reviewsSection" data-ar="التقييمات" data-en="Reviews">التقييمات</a></li>
+<li><a href="#" id="openSettings" data-ar="الإعدادات" data-en="Settings">الإعدادات ⚙️</a></li>
+<li><a href="#contact" data-ar="تواصل" data-en="Contact">تواصل</a></li>
+</ul>
+</div>
+</nav>
 
-  <!-- Hero -->
-  <header class="hero">
-    <div class="container">
-      <img src="ahmed.jpg" alt="AHMED SALAMA BADR" class="profile-img">
-      <h2>مهندس مدني</h2>
-      <p>خبرة علميه وعملية في الهندسة المدنية والعمارة، أعمل حاليًا في شركة أوتاد</p>
-      <a href="#contact" class="btn">📞 تواصل الآن</a>
-    </div>
-  </header>
+<header class="hero">
+<div class="container">
+<img src="ahmed.jpg" alt="AHMED SALAMA BADR" class="profile-img">
+<h2 data-ar="مهندس مدني | كورس عمارة" data-en="Civil Engineer | Architecture Course">مهندس مدني | كورس عمارة</h2>
+<p data-ar="خبرة عملية في الهندسة المدنية والعمارة، أعمل حاليًا في شركة أوتاد" data-en="Practical experience in civil engineering and architecture, currently working at Otad Company">خبرة عملية في الهندسة المدنية والعمارة، أعمل حاليًا في شركة أوتاد</p>
+<a href="#contact" class="btn" data-ar="📞 تواصل الآن" data-en="📞 Contact Now">📞 تواصل الآن</a>
+</div>
+</header>
 
-  <!-- About -->
-  <section id="about" class="section about">
-    <div class="container">
-      <h2 class="section-title">نبذة عني</h2>
-      <p>
-        أنا <strong>بشمندس احمد</strong> مهندس مدني، حاصل على كورس عمارة، وأعمل في شركة أوتاد. لدي خبرة في تصميم المشاريع المعمارية وأعمال التنفيذ المدنية والإشراف على المواقع. أهدف دائمًا لتقديم أفضل جودة في كل مشروع أعمل عليه.
-      </p>
-    </div>
-  </section>
+<section id="about" class="section about">
+<div class="container">
+<h2 class="section-title" data-ar="نبذة عني" data-en="About Me">نبذة عني</h2>
+<p data-ar="أنا AHMED SALAMA BADR مهندس مدني، حاصل على كورس عمارة، وأعمل في شركة أوتاد. لدي خبرة في تصميم المشاريع المعمارية وأعمال التنفيذ المدنية والإشراف على المواقع. أهدف دائمًا لتقديم أفضل جودة في كل مشروع أعمل عليه."
+data-en="I am AHMED SALAMA BADR, a civil engineer, certified in architecture, working at Otad Company. Experienced in architectural design and civil execution. I always aim to deliver the best quality.">أنا AHMED SALAMA BADR مهندس مدني، حاصل على كورس عمارة، وأعمل في شركة أوتاد. لدي خبرة في تصميم المشاريع المعمارية وأعمال التنفيذ المدنية والإشراف على المواقع. أهدف دائمًا لتقديم أفضل جودة في كل مشروع أعمل عليه.</p>
+</div>
+</section>
 
-  <!-- Projects -->
-  <section id="projects" class="section projects">
-    <div class="container">
-      <h2 class="section-title">مشاريعي</h2>
-      <div class="project-cards">
-        <div class="project-card">
-          <img src="project1.jpg" alt="Project 1">
-          <h3>مشروع سكني حديث</h3>
-          <p>تصميم وتنفيذ مشروع سكني متعدد الطوابق مع الالتزام بالمواصفات الحديثة.</p>
-        </div>
-        <div class="project-card">
-          <img src="project2.jpg" alt="Project 2">
-          <h3>مركز تجاري</h3>
-          <p>إشراف على البناء والتنسيق المعماري لمركز تجاري متكامل.</p>
-        </div>
-        <div class="project-card">
-          <img src="project3.jpg" alt="Project 3">
-          <h3>فيلا فاخرة</h3>
-          <p>تصميم معماري داخلي وخارجي لفيلا فاخرة مع تنسيق المساحات.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<section id="projects" class="section projects">
+<div class="container">
+<h2 class="section-title" data-ar="مشاريعي" data-en="Projects">مشاريعي</h2>
+<div class="project-cards">
+<div class="project-card"><img src="project1.jpg" alt="Project 1"><h3 data-ar="مشروع سكني حديث" data-en="Modern Residential Project">مشروع سكني حديث</h3><p data-ar="تصميم وتنفيذ مشروع سكني متعدد الطوابق مع الالتزام بالمواصفات الحديثة." data-en="Design and construction of a multi-story residential project with modern specifications.">تصميم وتنفيذ مشروع سكني متعدد الطوابق مع الالتزام بالمواصفات الحديثة.</p></div>
+<div class="project-card"><img src="project2.jpg" alt="Project 2"><h3 data-ar="مركز تجاري" data-en="Commercial Center">مركز تجاري</h3><p data-ar="إشراف على البناء والتنسيق المعماري لمركز تجاري متكامل." data-en="Supervision of construction and architectural coordination for a full commercial center.">إشراف على البناء والتنسيق المعماري لمركز تجاري متكامل.</p></div>
+<div class="project-card"><img src="project3.jpg" alt="Project 3"><h3 data-ar="فيلا فاخرة" data-en="Luxury Villa">فيلا فاخرة</h3><p data-ar="تصميم معماري داخلي وخارجي لفيلا فاخرة مع تنسيق المساحات." data-en="Interior and exterior architectural design for a luxury villa.">تصميم معماري داخلي وخارجي لفيلا فاخرة مع تنسيق المساحات.</p></div>
+</div>
+</div>
+</section>
 
-  <!-- Service Section -->
-  <section id="service" class="section">
-    <div class="container">
-      <h2 class="section-title">احجز خدمتك</h2>
-      <div style="text-align:center; max-width:500px; margin:auto;">
-        <label for="serviceType">اختر نوع الخدمة:</label>
-        <select id="serviceType">
-          <option value="">-- اختر --</option>
-          <option value="بناء">بناء</option>
-          <option value="تشطيب">تشطيب</option>
-        </select>
+<section id="service" class="section">
+<div class="container">
+<h2 class="section-title" data-ar="احجز خدمتك" data-en="Book Service">احجز خدمتك</h2>
+<div style="text-align:center; max-width:500px; margin:auto;">
+<label for="serviceType" data-ar="اختر نوع الخدمة:" data-en="Select Service:">اختر نوع الخدمة:</label>
+<select id="serviceType">
+<option value="">-- اختر --</option>
+<option value="بناء" data-ar="بناء" data-en="Building">بناء</option>
+<option value="تشطيب" data-ar="تشطيب" data-en="Finishing">تشطيب</option>
+</select>
+<label for="projectType" data-ar="اختر نوع المشروع:" data-en="Select Project Type:">اختر نوع المشروع:</label>
+<select id="projectType">
+<option value="">-- اختر --</option>
+<option value="بيت" data-ar="بيت" data-en="House">بيت</option>
+<option value="فيلا" data-ar="فيلا" data-en="Villa">فيلا</option>
+<option value="مصنع" data-ar="مصنع" data-en="Factory">مصنع</option>
+<option value="مول" data-ar="مول" data-en="Mall">مول</option>
+<option value="شقة" data-ar="شقة" data-en="Apartment">شقة</option>
+</select>
 
-        <label for="projectType">اختر نوع المشروع:</label>
-        <select id="projectType">
-          <option value="">-- اختر --</option>
-          <option value="بيت">بيت</option>
-          <option value="فيلا">فيلا</option>
-          <option value="مصنع">مصنع</option>
-          <option value="مول">مول</option>
-          <option value="شقة">شقة</option>
-        </select>
+<a href="#" id="sendWhatsapp" class="whatsapp-btn" data-ar="💬 أرسل الطلب على واتساب" data-en="💬 Send Booking on WhatsApp">💬 أرسل الطلب على واتساب</a>
+</div>
+</section>
 
-        <a href="#" id="sendWhatsapp" class="whatsapp-btn">💬 أرسل الطلب على واتساب</a>
-      </div>
-    </div>
-  </section>
+<section id="payment" class="section">
+<div class="container">
+<h2 class="section-title" data-ar="الدفع عبر فودافون كاش" data-en="Payment via Vodafone Cash">الدفع عبر فودافون كاش</h2>
+<div style="text-align:center; max-width:500px; margin:auto;">
+<p data-ar="يمكنك الدفع على نفس الرقم:" data-en="You can pay on the same number:"><strong>01069132939</strong></p>
+<label for="amount" data-ar="ادخل المبلغ المراد دفعه (جنيه):" data-en="Enter amount (EGP):">ادخل المبلغ المراد دفعه (جنيه):</label>
+<input type="number" id="amount" placeholder="مثال: 500">
+<a href="#" id="sendPayment" class="whatsapp-btn" data-ar="💸 إرسال الدفع على واتساب" data-en="💸 Send Payment on WhatsApp">💸 إرسال الدفع على واتساب</a>
+</div>
+</section>
 
-  <!-- Payment Section -->
-  <section id="payment" class="section">
-    <div class="container">
-      <h2 class="section-title">الدفع عبر فودافون كاش</h2>
-      <div style="text-align:center; max-width:500px; margin:auto;">
-        <p>يمكنك الدفع على نفس الرقم: <strong>01069132939</strong></p>
-        <label for="amount">ادخل المبلغ المراد دفعه (جنيه):</label>
-        <input type="number" id="amount" placeholder="مثال: 500">
-        <a href="#" id="sendPayment" class="whatsapp-btn">💸 إرسال الدفع على واتساب</a>
-      </div>
-    </div>
-  </section>
+<section id="reviewsSection" class="section">
+<div class="container">
+<h2 class="section-title" data-ar="التقييمات" data-en="Reviews">التقييمات</h2>
+<div id="reviews"></div>
+<div style="text-align:center; max-width:400px; margin:auto;">
+<label for="userRating" data-ar="قيم الخدمة:" data-en="Rate the service:">قيم الخدمة:</label>
+<select id="userRating">
+<option value="1">⭐</option>
+<option value="2">⭐⭐</option>
+<option value="3">⭐⭐⭐</option>
+<option value="4">⭐⭐⭐⭐</option>
+<option value="5">⭐⭐⭐⭐⭐</option>
+</select>
+<button id="addReview" class="btn" data-ar="إرسال التقييم" data-en="Submit Review">إرسال التقييم</button>
+</div>
+</div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section">
-    <div class="container">
-      <h2 class="section-title">تواصل معي</h2>
-      <div class="contact-buttons">
-        <a href="tel:+201069132939" class="call-btn">📞 اتصال مباشر</a>
-        <a href="https://wa.me/201069132939" target="_blank" class="whatsapp-btn">💬 واتساب مباشر</a>
-        <a href="https://www.instagram.com/a7med.badr00/?igsh=Z2h0Y2lmMTRid3k1" target="_blank" class="instagram-btn">📸 إنستجرام</a>
-      </div>
-    </div>
-  </section>
+<section id="contact" class="section">
+<div class="container">
+<h2 class="section-title" data-ar="تواصل معي" data-en="Contact Me">تواصل معي</h2>
+<div class="contact-buttons">
+<a href="tel:+201069132939" class="call-btn">📞 اتصال مباشر</a>
+<a href="https://wa.me/201069132939" target="_blank" class="whatsapp-btn">💬 واتساب مباشر</a>
+<a href="https://www.instagram.com/a7med.badr00/?igsh=Z2h0Y2lmMTRid3k1" target="_blank" class="instagram-btn">📸 إنستجرام</a>
+</div>
+</div>
+</section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 AHMED SALAMA BADR - جميع الحقوق محفوظة</p>
-  </footer>
+<!-- Sidebar Settings -->
+<div id="settingsSidebar">
+    <button id="closeSettings">❌ إغلاق</button>
+    <h2 data-ar="الإعدادات" data-en="Settings">الإعدادات</h2>
+    <p data-ar="<strong>About:</strong> هذا الموقع يعرض معلومات AHMED SALAMA BADR" data-en="<strong>About:</strong> This website shows information about AHMED SALAMA BADR"><strong>About:</strong> هذا الموقع يعرض معلومات AHMED SALAMA BADR</p>
+    <p data-ar="<strong>صانع الموقع:</strong> Eng: Mahmoud Salama" data-en="<strong>Site creator:</strong> Eng: Mahmoud Salama"><strong>صانع الموقع:</strong> Eng: Mahmoud Salama</p>
+    <p data-ar="<strong>رقم الهاتف:</strong> 01034355314" data-en="<strong>Phone:</strong> 01034355314"><strong>رقم الهاتف:</strong> 01034355314</p>
+    <label data-ar="اختر اللغة:" data-en="Select Language:">اختر اللغة:</label>
+    <select id="languageSelect">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+    </select>
+</div>
 
-  <script>
-    // Service Section WhatsApp
-    const sendBtn = document.getElementById('sendWhatsapp');
-    sendBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      const service = document.getElementById('serviceType').value;
-      const project = document.getElementById('projectType').value;
-      if(service === "" || project === ""){
-        alert("يرجى اختيار نوع الخدمة ونوع المشروع");
-        return;
-      }
-      const phone = "201069132939";
-      const message = مرحبًا، أود حجز خدمة ${service} لمشروع نوعه ${project}.;
-      const url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
-      window.open(url, '_blank');
-    });
+<footer>
+<p>© 2025 AHMED SALAMA BADR - جميع الحقوق محفوظة</p>
+</footer>
 
-    // Payment Section WhatsApp
-    const paymentBtn = document.getElementById('sendPayment');
-    paymentBtn.addEventListener('click', function(e){
-      e.preventDefault();
-      const amount = document.getElementById('amount').value;
-      if(amount === "" || amount <= 0){
-        alert("يرجى إدخال مبلغ صحيح");
-        return;
-      }
-      const phone = "201069132939";
-      const message = مرحبًا، أريد دفع مبلغ ${amount} جنيه على فودافون كاش.;
-      const url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
-      window.open(url, '_blank');
-    });
-  </script>
+<script>
+// Sidebar open/close
+document.getElementById('openSettings').addEventListener('click', function(e){
+    e.preventDefault();
+    document.getElementById('settingsSidebar').style.right = "0";
+});
+document.getElementById('closeSettings').addEventListener('click', function(){
+    document.getElementById('settingsSidebar').style.right = "-400px";
+});
+// WhatsApp booking
+document.getElementById('sendWhatsapp').addEventListener('click', function(e){
+e.preventDefault();
+const service = document.getElementById('serviceType').value;
+const project = document.getElementById('projectType').value;
+if(service === "" || project === ""){ alert("يرجى اختيار نوع الخدمة ونوع المشروع"); return;}
+const phone="201069132939";
+const message=مرحبًا، أود حجز خدمة ${service} لمشروع نوعه ${project}.;
+window.location.href=https://wa.me/${phone}?text=${encodeURIComponent(message)};
+});
 
-</body>
-</html>
+// WhatsApp payment
+document.getElementById('sendPayment').addEventListener('click', function(e){
+e.preventDefault();
+const amount=document.getElementById('amount').value;
+if(amount==="" || amount<=0){alert("يرجى إدخال مبلغ صحيح"); return;}
+const phone="201069132939";
+const message=مرحبًا، أريد دفع مبلغ ${amount} جنيه على فودافون كاش.;
+window.location.href=https://wa.me/${phone}?text=${encodeURIComponent(message)};
+});
+
+// Reviews
+let reviews=[];
+function displayReviews(){
+const container=document.getElementById('reviews');
+container.innerHTML="";
+reviews.forEach(r=>{
+const div=document.createElement('div');
+div.classList.add('review');
+div.innerText=r;
+container.appendChild(div);
+});
+}
+document.getElementById('addReview').addEventListener('click',()=>{
+const rating=document.getElementById('userRating').value;
+reviews.push("تقييم: "+rating+" نجوم");
+displayReviews();
+});
+
+// Language switch
+const elements = document.querySelectorAll('[data-ar]');
+document.getElementById('languageSelect').addEventListener('change',(e)=>{
+const lang = e.target.value;
+elements.forEach(el=>{
+el.innerHTML = el.getAttribute(lang==='en'?'data-en':'data
