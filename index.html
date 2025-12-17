@@ -3,60 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eng: Ahmed Salama Badr - Portfolio</title>
+  <title>AHMED SALAMA BADR - Portfolio</title>
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-    body { direction: rtl; background: #f0f2f5; color: #333; }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, sans-serif; }
+    body { direction: rtl; background: #f5f7fa; color: #333; }
 
+    /* Navbar */
     nav {
-      background: #1f1f1f; color: #fff; padding: 15px 0; box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      background: #0d1b2a;
+      color: #fff;
+      padding: 15px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      position: sticky;
+      top: 0;
+      z-index: 999;
     }
-    nav .container { width: 90%; margin: auto; display: flex; justify-content: space-between; align-items: center; }
-    nav ul { list-style: none; display: flex; gap: 20px; }
-    nav ul li a { color: #fff; text-decoration: none; font-weight: bold; transition: 0.3s; }
-    nav ul li a:hover { color: #ffd700; }
+    nav .container { width: 90%; margin: auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; }
+    nav h1 { font-size: 22px; font-weight: bold; color: #ffd700; }
+    nav ul { list-style: none; display: flex; gap: 20px; flex-wrap: wrap; }
+    nav ul li a { color: #fff; text-decoration: none; font-weight: 600; transition: 0.3s; padding:5px 10px; border-radius:5px; }
+    nav ul li a:hover { background: #ffd700; color: #0d1b2a; }
 
+    /* Hero */
     .hero {
-      background: linear-gradient(135deg, #4b6cb7, #182848);
-      color: #fff; text-align: center; padding: 70px 0;
+      background: linear-gradient(135deg, #1f4068, #2980b9);
+      color: #fff;
+      text-align: center;
+      padding: 90px 20px 70px 20px;
     }
     .profile-img {
-      width: 180px; height: 180px; border-radius: 50%; border: 4px solid #fff; object-fit: cover;
+      width: 180px; height: 180px; border-radius: 50%; border: 4px solid #ffd700; object-fit: cover;
       margin-bottom: 20px; transition: transform 0.3s;
     }
-    .profile-img:hover { transform: scale(1.05); }
-    .hero h2 { font-size: 28px; margin: 15px 0; }
-    .hero p { font-size: 18px; margin-bottom: 20px; }
-    .btn { display: inline-block; padding: 14px 30px; background: #ffd700; color: #222; text-decoration: none; border-radius: 8px; font-weight: bold; transition: 0.3s; }
-    .btn:hover { background: #ffe55c; }
+    .profile-img:hover { transform: scale(1.08); }
+    .hero h2 { font-size: 32px; margin: 15px 0; font-weight: 700; }
+    .hero p { font-size: 18px; margin-bottom: 25px; line-height: 1.6; }
+    .btn { display: inline-block; padding: 16px 32px; background: #ffd700; color: #0d1b2a; text-decoration: none; border-radius: 12px; font-weight: bold; transition: 0.3s; box-shadow: 0 6px 12px rgba(0,0,0,0.15);}
+    .btn:hover { background: #ffc107; box-shadow: 0 8px 18px rgba(0,0,0,0.25); }
 
-    .section { padding: 60px 0; }
+    /* Section titles */
+    .section { padding: 70px 0; }
     .container { width: 90%; margin: auto; }
-    h2.section-title { text-align: center; font-size: 32px; margin-bottom: 40px; color: #1f1f1f; position: relative; }
-    h2.section-title::after { content: ''; width: 60px; height: 4px; background: #ffd700; display: block; margin: 10px auto 0; border-radius: 2px; }
+    h2.section-title { text-align: center; font-size: 36px; margin-bottom: 50px; color: #0d1b2a; position: relative; font-weight: 700; }
+    h2.section-title::after { content: ''; width: 80px; height: 5px; background: #ffd700; display: block; margin: 15px auto 0; border-radius: 3px; }
 
     /* About */
-    .about p { max-width: 800px; margin: auto; font-size: 18px; line-height: 1.7; text-align: center; }
+    .about p { max-width: 850px; margin: auto; font-size: 18px; line-height: 1.8; text-align: center; }
 
     /* Projects */
-    .projects .project-cards {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;
-    }
+    .projects .project-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; }
     .project-card {
-      background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: #fff; border-radius: 15px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.1); transition: transform 0.4s, box-shadow 0.4s;
     }
-    .project-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-    .project-card img { width: 100%; height: 160px; object-fit: cover; }
-    .project-card h3 { padding: 15px; font-size: 20px; color: #1f1f1f; }
-    .project-card p { padding: 0 15px 15px 15px; font-size: 16px; color: #555; }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 12px 28px rgba(0,0,0,0.2); }
+    .project-card img { width: 100%; height: 180px; object-fit: cover; }
+    .project-card h3 { padding: 15px; font-size: 20px; color: #0d1b2a; }
+    .project-card p { padding: 0 15px 20px 15px; font-size: 16px; color: #555; }
 
-    /* Contact */
+    /* Contact & Buttons */
     .contact-buttons { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 30px; }
-    .call-btn, .whatsapp-btn, .instagram-btn {
-      padding: 14px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; color: #fff; transition: 0.3s;
-    }
+    .call-btn, .whatsapp-btn, .instagram-btn { padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: bold; color: #fff; transition: 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.15);}
     .call-btn { background: #007bff; }
     .call-btn:hover { background: #0056b3; }
     .whatsapp-btn { background: #25d366; }
@@ -64,42 +71,57 @@
     .instagram-btn { background: #C13584; }
     .instagram-btn:hover { background: #a0266f; }
 
-    footer { text-align: center; padding: 20px 0; background: #1f1f1f; color: #fff; }
+    /* Service & Payment */
+    #service select, #payment input { padding:12px; margin:12px 0; width:100%; border-radius:8px; border:1px solid #ccc; font-size:16px; }
+    #service a, #payment a { display:inline-block; margin-top:12px; }
 
-    /* Responsive */
-    @media (max-width: 768px){ .hero h2 { font-size: 24px; } .hero p { font-size: 16px; } }
+    footer { text-align: center; padding: 25px 0; background: #0d1b2a; color: #fff; font-weight: 600; }
+    @media (max-width: 768px){
+      .hero h2 { font-size: 28px; } 
+      .hero p { font-size: 16px; }
+      nav h1 { font-size: 20px; }
+      nav ul li a { font-size: 14px; padding:4px 8px; }
+    }
   </style>
 </head>
 
 <body>
 
+  <!-- Navbar -->
   <nav>
     <div class="container">
-      <h1>Eng: Ahmed Salama Badr</h1>
+      <h1>AHMED SALAMA BADR</h1>
       <ul>
         <li><a href="#about">نبذة</a></li>
         <li><a href="#projects">مشاريعي</a></li>
+        <li><a href="#service">احجز خدمتك</a></li>
+        <li><a href="#payment">الدفع</a></li>
         <li><a href="#contact">تواصل</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Hero -->
   <header class="hero">
     <div class="container">
-      <img src="ahmed.jpg" alt="Eng: Ahmed Salama Badr" class="profile-img">
-      <h2>مهندس مدني | بيهرب من الشغل </h2>
-      <p>خبرة علميه و عملية في الهندسة المدنية والعمارة، أعمل حاليًا في شركة أوتاد و بيمشيها بالحب </p>
+      <img src="ahmed.jpg" alt="AHMED SALAMA BADR" class="profile-img">
+      <h2>مهندس مدني</h2>
+      <p>خبرة علميه وعملية في الهندسة المدنية والعمارة، أعمل حاليًا في شركة أوتاد</p>
       <a href="#contact" class="btn">📞 تواصل الآن</a>
     </div>
-  </header><section id="about" class="section about">
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section about">
     <div class="container">
       <h2 class="section-title">نبذة عني</h2>
       <p>
-        أنا بشمهندس احمد سلامة مهندس مدني،و حاصل على كورس عمارة، وأعمل في شركة أوتاد. لدي خبرة في تصميم المشاريع المعمارية وأعمال التنفيذ المدنية والإشراف على المواقع. أهدف دائمًا لتقديم أفضل جودة في كل مشروع أعمل عليه.
+        أنا <strong>بشمندس احمد</strong> مهندس مدني، حاصل على كورس عمارة، وأعمل في شركة أوتاد. لدي خبرة في تصميم المشاريع المعمارية وأعمال التنفيذ المدنية والإشراف على المواقع. أهدف دائمًا لتقديم أفضل جودة في كل مشروع أعمل عليه.
       </p>
     </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects" class="section projects">
     <div class="container">
       <h2 class="section-title">مشاريعي</h2>
@@ -123,6 +145,47 @@
     </div>
   </section>
 
+  <!-- Service Section -->
+  <section id="service" class="section">
+    <div class="container">
+      <h2 class="section-title">احجز خدمتك</h2>
+      <div style="text-align:center; max-width:500px; margin:auto;">
+        <label for="serviceType">اختر نوع الخدمة:</label>
+        <select id="serviceType">
+          <option value="">-- اختر --</option>
+          <option value="بناء">بناء</option>
+          <option value="تشطيب">تشطيب</option>
+        </select>
+
+        <label for="projectType">اختر نوع المشروع:</label>
+        <select id="projectType">
+          <option value="">-- اختر --</option>
+          <option value="بيت">بيت</option>
+          <option value="فيلا">فيلا</option>
+          <option value="مصنع">مصنع</option>
+          <option value="مول">مول</option>
+          <option value="شقة">شقة</option>
+        </select>
+
+        <a href="#" id="sendWhatsapp" class="whatsapp-btn">💬 أرسل الطلب على واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Payment Section -->
+  <section id="payment" class="section">
+    <div class="container">
+      <h2 class="section-title">الدفع عبر فودافون كاش</h2>
+      <div style="text-align:center; max-width:500px; margin:auto;">
+        <p>يمكنك الدفع على نفس الرقم: <strong>01069132939</strong></p>
+        <label for="amount">ادخل المبلغ المراد دفعه (جنيه):</label>
+        <input type="number" id="amount" placeholder="مثال: 500">
+        <a href="#" id="sendPayment" class="whatsapp-btn">💸 إرسال الدفع على واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
   <section id="contact" class="section">
     <div class="container">
       <h2 class="section-title">تواصل معي</h2>
@@ -134,14 +197,43 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>© 2025 AHMED SALAMA BADR - جميع الحقوق محفوظة</p>
   </footer>
 
   <script>
-    console.log("Ahmed's Portfolio Loaded Successfully");
+    // Service Section WhatsApp
+    const sendBtn = document.getElementById('sendWhatsapp');
+    sendBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      const service = document.getElementById('serviceType').value;
+      const project = document.getElementById('projectType').value;
+      if(service === "" || project === ""){
+        alert("يرجى اختيار نوع الخدمة ونوع المشروع");
+        return;
+      }
+      const phone = "201069132939";
+      const message = مرحبًا، أود حجز خدمة ${service} لمشروع نوعه ${project}.;
+      const url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
+      window.open(url, '_blank');
+    });
+
+    // Payment Section WhatsApp
+    const paymentBtn = document.getElementById('sendPayment');
+    paymentBtn.addEventListener('click', function(e){
+      e.preventDefault();
+      const amount = document.getElementById('amount').value;
+      if(amount === "" || amount <= 0){
+        alert("يرجى إدخال مبلغ صحيح");
+        return;
+      }
+      const phone = "201069132939";
+      const message = مرحبًا، أريد دفع مبلغ ${amount} جنيه على فودافون كاش.;
+      const url = https://wa.me/${phone}?text=${encodeURIComponent(message)};
+      window.open(url, '_blank');
+    });
   </script>
 
 </body>
 </html>
-  
